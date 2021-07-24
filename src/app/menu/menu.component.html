@@ -1,0 +1,28 @@
+<div
+  class="d-flex align-items-center justify-content-center"
+  style="height: 100vh"
+>
+  <div class="card" style="width: 60rem">
+    <div
+      class="row align-items-center justify-content-around"
+      style="height: 10rem"
+    >
+      <div class="col-5">
+        <app-menu-item
+          id="new-order"
+          name="New Order"
+          description="Start new order for customer"
+          (onClick)="navigateToItem($event)"
+        ></app-menu-item>
+      </div>
+      <div class="col-5">
+        <app-menu-item
+          id="dashboard"
+          name="Dashboard"
+          description="View coffee shop dashboard"
+          (onClick)="navigateToItem($event)"
+        ></app-menu-item>
+      </div>
+    </div>
+  </div>
+</div>
