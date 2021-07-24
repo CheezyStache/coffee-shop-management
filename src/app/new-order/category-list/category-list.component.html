@@ -1,0 +1,8 @@
+<div class="d-flex justify-content-around flex-wrap" style="width: 60rem">
+  <div class="p-4" *ngFor="let category of categories">
+    <app-category-item
+      [category]="category"
+      (onCategoryClick)="onCategoryClick($event)"
+    ></app-category-item>
+  </div>
+</div>

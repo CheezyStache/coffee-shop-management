@@ -6,19 +6,19 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./menu-item.component.css'],
 })
 export class MenuItemComponent {
-  @Input() id: string;
+  @Input() route: string;
   @Input() name: string;
   @Input() description: string;
 
   @Output() onClick: EventEmitter<string> = new EventEmitter<string>();
 
   constructor() {
-    this.id = '';
+    this.route = '';
     this.name = '';
     this.description = '';
   }
 
   onMenuClick(): void {
-    this.onClick.emit(this.id);
+    this.onClick.emit(this.route);
   }
 }

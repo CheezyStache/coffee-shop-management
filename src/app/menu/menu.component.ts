@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 export class MenuComponent {
   constructor(private router: Router) {}
 
-  navigateToItem(id: string): void {
-    this.router.navigate([id]);
+  navigateToItem(route: string): void {
+    this.router.navigate([route]);
   }
 }
