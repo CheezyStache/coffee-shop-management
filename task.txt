@@ -1,0 +1,8 @@
+- login
+- starter buttons: view dashboard / start new order
+- side panel: current order
+- main panel: category -> product -> add-ons
+- side panel: confirm order
+- checkout panel with order, customer id (to personal offers, points), payment type, points removal
+- invoice generation
+- dashboard with order history
