@@ -8,6 +8,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { ProductItemComponent } from './product-item/product-item.component';
 import { AddonsListComponent } from './addons-list/addons-list.component';
 import { AddonItemComponent } from './addon-item/addon-item.component';
+import { ParametersItemComponent } from './parameters-item/parameters-item.component';
+import { ParametersListComponent } from './parameters-list/parameters-list.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'category', pathMatch: 'full' },
@@ -25,6 +27,8 @@ export const routes: Routes = [
     ProductItemComponent,
     AddonsListComponent,
     AddonItemComponent,
+    ParametersItemComponent,
+    ParametersListComponent,
   ],
   imports: [CommonModule, RouterModule],
 })
