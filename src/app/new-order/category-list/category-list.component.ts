@@ -1,27 +1,29 @@
-import { Component } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { CatalogService } from '../catalog.service';
 import { CategoryItem } from '../category-item/category-item.model';
+import { UrlGeneratorService } from '../url-generator.service';
 
 @Component({
   selector: 'app-category-list',
   templateUrl: './category-list.component.html',
   styleUrls: ['./category-list.component.css'],
+  providers: [UrlGeneratorService],
 })
-export class CategoryListComponent {
-  categories: CategoryItem[];
+export class CategoryListComponent implements OnInit {
+  categories: CategoryItem[] = [];
 
-  constructor(private router: Router, private route: ActivatedRoute) {
-    this.categories = [
-      new CategoryItem('Coffee'),
-      new CategoryItem('Dessert'),
-      new CategoryItem('Tea'),
-      new CategoryItem('Snacks'),
-    ];
+  constructor(
+    private urlGenerator: UrlGeneratorService,
+    private catalog: CatalogService
+  ) {}
+
+  ngOnInit(): void {
+    this.catalog
+      .getCategories()
+      .subscribe((categories) => (this.categories = categories));
   }
 
   onCategoryClick(name: string): void {
-    this.router.navigate(['../' + name.toLowerCase()], {
-      relativeTo: this.route,
-    });
+    this.urlGenerator.navigateToCatalogUrl('../', name);
   }
 }

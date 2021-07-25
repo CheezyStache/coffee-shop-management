@@ -1,6 +1,6 @@
 <h3 class="p-1 text-center">Pick product</h3>
 <div class="d-flex justify-content-around flex-wrap" style="width: 60rem">
-  <div class="p-4" *ngFor="let product of filteredProducts">
+  <div class="p-4" *ngFor="let product of products">
     <app-product-item
       [product]="product"
       (onProductClick)="onProductClick($event)"

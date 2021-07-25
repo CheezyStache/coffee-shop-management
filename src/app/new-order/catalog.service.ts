@@ -44,112 +44,112 @@ const categories: CategoryItem[] = [
 ];
 
 const products: ProductItem[] = [
-  new ProductItem('Latte', 4.0, 'Coffee'),
-  new ProductItem('Espresso', 2.5, 'Coffee'),
-  new ProductItem('Americano', 3.0, 'Coffee'),
-  new ProductItem('Mocha', 5.0, 'Coffee'),
-  new ProductItem('Ice cream', 3.5, 'Dessert'),
-  new ProductItem('Cake', 5.5, 'Dessert'),
-  new ProductItem('Muffin', 2.0, 'Dessert'),
-  new ProductItem('Black', 2.0, 'Tea'),
-  new ProductItem('Green', 2.5, 'Tea'),
-  new ProductItem('Fruit', 3.5, 'Tea'),
-  new ProductItem('Sweets', 1.5, 'Snacks'),
-  new ProductItem('Macaron', 3.5, 'Snacks'),
-  new ProductItem('Oreo', 2.0, 'Snacks'),
+  new ProductItem('Latte', 4.0, 'coffee'),
+  new ProductItem('Espresso', 2.5, 'coffee'),
+  new ProductItem('Americano', 3.0, 'coffee'),
+  new ProductItem('Mocha', 5.0, 'coffee'),
+  new ProductItem('Ice cream', 3.5, 'dessert'),
+  new ProductItem('Cake', 5.5, 'dessert'),
+  new ProductItem('Muffin', 2.0, 'dessert'),
+  new ProductItem('Black', 2.0, 'tea'),
+  new ProductItem('Green', 2.5, 'tea'),
+  new ProductItem('Fruit', 3.5, 'tea'),
+  new ProductItem('Sweets', 1.5, 'snacks'),
+  new ProductItem('Macaron', 3.5, 'snacks'),
+  new ProductItem('Oreo', 2.0, 'snacks'),
 ];
 
 const parametersSection: ParametersSection[] = [
-  new ParametersSection('Size', 'Latte', [
+  new ParametersSection('Size', 'latte', [
     new ParametersItem('Medium', 0),
     new ParametersItem('Large', 1),
   ]),
-  new ParametersSection('Size', 'Espresso', [
+  new ParametersSection('Size', 'espresso', [
     new ParametersItem('Small', 0),
     new ParametersItem('Medium', 1),
   ]),
-  new ParametersSection('Size', 'Americano', [
+  new ParametersSection('Size', 'americano', [
     new ParametersItem('Small', 0),
     new ParametersItem('Medium', 1),
   ]),
-  new ParametersSection('Size', 'Mocha', [
+  new ParametersSection('Size', 'mocha', [
     new ParametersItem('Small', 0),
     new ParametersItem('Medium', 1),
     new ParametersItem('Large', 2),
   ]),
-  new ParametersSection('Size', 'Black', [
+  new ParametersSection('Size', 'black', [
     new ParametersItem('Small', 0),
     new ParametersItem('Medium', 1),
   ]),
-  new ParametersSection('Size', 'Green', [
+  new ParametersSection('Size', 'green', [
     new ParametersItem('Small', 0),
     new ParametersItem('Medium', 1),
   ]),
-  new ParametersSection('Size', 'Fruit', [
+  new ParametersSection('Size', 'fruit', [
     new ParametersItem('Small', 0),
     new ParametersItem('Medium', 1),
   ]),
 
-  new ParametersSection('Milk', 'Latte', [
+  new ParametersSection('Milk', 'latte', [
     new ParametersItem('Standard', 0),
     new ParametersItem('Lactose free', 0),
     new ParametersItem('Coconut', 2.5),
   ]),
-  new ParametersSection('Milk', 'Mocha', [
+  new ParametersSection('Milk', 'mocha', [
     new ParametersItem('Standard', 0),
     new ParametersItem('Lactose free', 0),
     new ParametersItem('Coconut', 2.5),
   ]),
 
-  new ParametersSection('Roasting', 'Latte', [
+  new ParametersSection('Roasting', 'latte', [
     new ParametersItem('Standard', 0),
     new ParametersItem('Strong', 1),
     new ParametersItem('Light', 1.5),
   ]),
-  new ParametersSection('Roasting', 'Espresso', [
+  new ParametersSection('Roasting', 'espresso', [
     new ParametersItem('Standard', 0),
     new ParametersItem('Strong', 1),
     new ParametersItem('Light', 1.5),
   ]),
-  new ParametersSection('Roasting', 'Americano', [
+  new ParametersSection('Roasting', 'americano', [
     new ParametersItem('Standard', 0),
     new ParametersItem('Strong', 1),
     new ParametersItem('Light', 1.5),
   ]),
-  new ParametersSection('Roasting', 'Mocha', [
+  new ParametersSection('Roasting', 'mocha', [
     new ParametersItem('Standard', 0),
     new ParametersItem('Strong', 1),
     new ParametersItem('Light', 1.5),
   ]),
 
-  new ParametersSection('Temperature', 'Black', [
+  new ParametersSection('Temperature', 'black', [
     new ParametersItem('Standard', 0),
     new ParametersItem('Very hot', 0),
     new ParametersItem('Cool', 2),
   ]),
-  new ParametersSection('Temperature', 'Green', [
+  new ParametersSection('Temperature', 'green', [
     new ParametersItem('Standard', 0),
     new ParametersItem('Very hot', 0),
     new ParametersItem('Cool', 2),
   ]),
-  new ParametersSection('Temperature', 'Fruit', [
+  new ParametersSection('Temperature', 'fruit', [
     new ParametersItem('Standard', 0),
     new ParametersItem('Very hot', 0),
     new ParametersItem('Cool', 2),
   ]),
 
-  new ParametersSection('Size', 'Ice cream', [
+  new ParametersSection('Size', 'ice-cream', [
     new ParametersItem('1 ball', 0),
     new ParametersItem('2 balls', 1),
     new ParametersItem('3 balls', 1.5),
   ]),
 
-  new ParametersSection('Topping', 'Cake', [
+  new ParametersSection('Topping', 'cake', [
     new ParametersItem('Cherry', 0),
     new ParametersItem('Chocolate', 0),
     new ParametersItem('Banana', 0),
   ]),
-  new ParametersSection('Topping', 'Macaron', [
+  new ParametersSection('Topping', 'macaron', [
     new ParametersItem('Lemon', 0),
     new ParametersItem('Berry', 0),
     new ParametersItem('Vanilla', 0),
@@ -157,17 +157,17 @@ const parametersSection: ParametersSection[] = [
 ];
 
 const addons: AddonItem[] = [
-  new AddonItem('Chocolate chips', 0.5, 'Latte'),
-  new AddonItem('Chocolate chips', 0.5, 'Mocha'),
-  new AddonItem('Chocolate chips', 0.5, 'Ice cream'),
-  new AddonItem('Chocolate chips', 0.5, 'Cake'),
+  new AddonItem('Chocolate chips', 0.5, 'latte'),
+  new AddonItem('Chocolate chips', 0.5, 'mocha'),
+  new AddonItem('Chocolate chips', 0.5, 'ice cream'),
+  new AddonItem('Chocolate chips', 0.5, 'cake'),
 
-  new AddonItem('Sugar', 0.2, 'Black'),
-  new AddonItem('Sugar', 0.2, 'Green'),
-  new AddonItem('Sugar', 0.2, 'Fruit'),
+  new AddonItem('Sugar', 0.2, 'black'),
+  new AddonItem('Sugar', 0.2, 'green'),
+  new AddonItem('Sugar', 0.2, 'fruit'),
 
-  new AddonItem('Cinnamon', 0.5, 'Latte'),
-  new AddonItem('Cinnamon', 0.5, 'Espresso'),
-  new AddonItem('Cinnamon', 0.5, 'Americano'),
-  new AddonItem('Cinnamon', 0.5, 'Mocha'),
+  new AddonItem('Cinnamon', 0.5, 'latte'),
+  new AddonItem('Cinnamon', 0.5, 'espresso'),
+  new AddonItem('Cinnamon', 0.5, 'americano'),
+  new AddonItem('Cinnamon', 0.5, 'mocha'),
 ];
