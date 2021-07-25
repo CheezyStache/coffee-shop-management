@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { CategoryItem } from '../category-item/category-item.model';
 
 @Component({
@@ -9,7 +10,7 @@ import { CategoryItem } from '../category-item/category-item.model';
 export class CategoryListComponent {
   categories: CategoryItem[];
 
-  constructor() {
+  constructor(private router: Router, private route: ActivatedRoute) {
     this.categories = [
       new CategoryItem('Coffee'),
       new CategoryItem('Dessert'),
@@ -19,6 +20,8 @@ export class CategoryListComponent {
   }
 
   onCategoryClick(name: string): void {
-    console.log(name);
+    this.router.navigate(['../' + name.toLowerCase()], {
+      relativeTo: this.route,
+    });
   }
 }
