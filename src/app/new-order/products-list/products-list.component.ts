@@ -28,6 +28,6 @@ export class ProductsListComponent implements OnInit {
   }
 
   onProductClick(name: string): void {
-    this.urlGenerator.navigateToCatalogUrl('../product', name);
+    this.urlGenerator.navigateToCatalogUrl('parameters', name);
   }
 }

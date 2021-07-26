@@ -48,6 +48,6 @@ export class ParametersListComponent implements OnInit {
   }
 
   onContinue(): void {
-    this.urlGenerator.navigateToCatalogUrl('../parameters', this.product.name);
+    this.urlGenerator.navigateToCatalogUrl('addons', this.product.name);
   }
 }

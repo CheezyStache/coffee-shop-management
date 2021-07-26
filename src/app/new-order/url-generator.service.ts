@@ -8,11 +8,18 @@ export class UrlGeneratorService {
   constructor(private router: Router, private route: ActivatedRoute) {}
 
   navigateToCatalogUrl(rootUrl: string, name?: string): void {
-    let parameter = name ?? '';
-    parameter = parameter.split(' ').join('-').toLowerCase();
+    if (name == undefined) {
+      this.router.navigate([rootUrl], {
+        relativeTo: this.route.parent,
+      });
+
+      return;
+    }
+
+    const parameter = name.split(' ').join('-').toLowerCase();
 
     this.router.navigate([rootUrl, parameter], {
-      relativeTo: this.route,
+      relativeTo: this.route.parent,
     });
   }
 }

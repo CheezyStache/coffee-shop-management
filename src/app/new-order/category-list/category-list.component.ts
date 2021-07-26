@@ -24,6 +24,6 @@ export class CategoryListComponent implements OnInit {
   }
 
   onCategoryClick(name: string): void {
-    this.urlGenerator.navigateToCatalogUrl('./', name);
+    this.urlGenerator.navigateToCatalogUrl('products', name);
   }
 }

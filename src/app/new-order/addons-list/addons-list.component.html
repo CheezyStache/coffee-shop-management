@@ -1,1 +1,24 @@
-<p>addons-list works!</p>
+<button
+  type="button"
+  class="btn btn-primary btn-lg"
+  style="width: 100%"
+  (click)="onFinish()"
+>
+  Finish product order
+</button>
+<h3 class="p-1 text-center">Choose product addons</h3>
+<div class="card mb-5">
+  <div class="row justify-content-between p-3">
+    <div class="fs-4 col-4">{{ product.name }}</div>
+    <div class="fs-4 col-4 text-end" style="color: #dc3545">
+      {{ product.price | currency }}
+    </div>
+  </div>
+</div>
+<div class="my-2" *ngFor="let addon of addons">
+  <app-addon-item
+    [addon]="addon"
+    [isPicked]="pickedAddons.includes(addon)"
+    (onAddonClick)="pickAddon($event)"
+  ></app-addon-item>
+</div>
