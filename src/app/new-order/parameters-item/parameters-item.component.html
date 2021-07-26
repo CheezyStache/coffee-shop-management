@@ -1,1 +1,16 @@
-<p>parameters-item works!</p>
+<div class="card p-3">
+  <h3 class="p-1">{{ parametersSection.name }}</h3>
+  <div class="row m-0">
+    <div
+      class="card col-3 me-5"
+      *ngFor="let param of parametersSection.parameters"
+      [style.background-color]="chosenItem === param.name ? '#20c997' : ''"
+      (click)="onClick(param.name)"
+    >
+      <h4>{{ param.name }}</h4>
+      <h4 style="color: #dc3545">
+        {{ param.price === 0 ? "Free" : (param.price | currency) }}
+      </h4>
+    </div>
+  </div>
+</div>

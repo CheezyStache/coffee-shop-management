@@ -23,6 +23,20 @@ export class CatalogService {
     );
   }
 
+  getProduct(name: string): Observable<ProductItem> {
+    return of(products).pipe(
+      map((ps) => {
+        const product = ps.find(
+          (p) => p.name.split(' ').join('-').toLowerCase() === name
+        );
+
+        if (product == undefined) throw `Product ${name} does not exist`;
+
+        return product;
+      })
+    );
+  }
+
   getParameters(product: string): Observable<ParametersSection[]> {
     return of(parametersSection).pipe(
       map((ps) => ps.filter((p) => p.product === product))

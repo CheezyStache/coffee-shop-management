@@ -15,9 +15,12 @@ import { CatalogService } from './catalog.service';
 export const routes: Routes = [
   { path: '', redirectTo: 'category', pathMatch: 'full' },
   { path: 'category', component: CategoryListComponent },
-  { path: ':categoryName', component: ProductsListComponent },
-  { path: ':categoryName/:productName', component: ParametersListComponent },
-  { path: ':categoryName/:productName/addons', component: AddonsListComponent },
+  { path: 'category/:categoryName', component: ProductsListComponent },
+  { path: 'category/product/:productName', component: ParametersListComponent },
+  {
+    path: 'category/product/parameters/:productName',
+    component: AddonsListComponent,
+  },
 ];
 
 @NgModule({
