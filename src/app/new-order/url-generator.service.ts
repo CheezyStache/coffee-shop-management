@@ -7,18 +7,15 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class UrlGeneratorService {
   constructor(private router: Router, private route: ActivatedRoute) {}
 
-  navigateToCatalogUrl(rootUrl: string, name?: string): void {
-    if (name == undefined) {
-      this.router.navigate([rootUrl], {
-        relativeTo: this.route.parent,
-      });
+  navigateToCatalogUrl(rootUrl: string, name?: string, id?: string): void {
+    const routeParams = [rootUrl];
 
-      return;
-    }
+    if (name != undefined)
+      routeParams.push(name.split(' ').join('-').toLowerCase());
 
-    const parameter = name.split(' ').join('-').toLowerCase();
+    if (id != undefined) routeParams.push(id);
 
-    this.router.navigate([rootUrl, parameter], {
+    this.router.navigate(routeParams, {
       relativeTo: this.route.parent,
     });
   }

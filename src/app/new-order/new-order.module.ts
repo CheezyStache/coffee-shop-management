@@ -11,13 +11,17 @@ import { AddonItemComponent } from './addon-item/addon-item.component';
 import { ParametersItemComponent } from './parameters-item/parameters-item.component';
 import { ParametersListComponent } from './parameters-list/parameters-list.component';
 import { CatalogService } from './catalog.service';
+import { CartModule } from '../cart/cart.module';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'category', pathMatch: 'full' },
   { path: 'category', component: CategoryListComponent },
   { path: 'products/:categoryName', component: ProductsListComponent },
-  { path: 'parameters/:productName', component: ParametersListComponent },
-  { path: 'addons/:productName', component: AddonsListComponent },
+  {
+    path: 'parameters/:productName/:cartItemId',
+    component: ParametersListComponent,
+  },
+  { path: 'addons/:productName/:cartItemId', component: AddonsListComponent },
 ];
 
 @NgModule({
@@ -32,7 +36,7 @@ export const routes: Routes = [
     ParametersItemComponent,
     ParametersListComponent,
   ],
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, CartModule],
   providers: [CatalogService],
 })
 export class NewOrderModule {}

@@ -1,0 +1,5 @@
+<h3>{{ cartItem.name }}</h3>
+<app-cart-item
+  *ngFor="let child of cartItem.children"
+  [cartItem]="child"
+></app-cart-item>
