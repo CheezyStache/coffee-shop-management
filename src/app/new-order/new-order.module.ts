@@ -10,8 +10,8 @@ import { AddonsListComponent } from './addons-list/addons-list.component';
 import { AddonItemComponent } from './addon-item/addon-item.component';
 import { ParametersItemComponent } from './parameters-item/parameters-item.component';
 import { ParametersListComponent } from './parameters-list/parameters-list.component';
-import { CatalogService } from './catalog.service';
-import { CartModule } from '../cart/cart.module';
+import { CatalogService } from './catalog/catalog.service';
+import { CartModule } from './cart/cart.module';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'category', pathMatch: 'full' },
