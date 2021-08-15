@@ -1,0 +1,553 @@
+[
+  {
+    "id": "category_1",
+    "name": "Coffee",
+    "products": [
+      {
+        "id": "product_1",
+        "name": "Latte",
+        "price": 4.0,
+        "parameters": [
+          {
+            "id": "parameter_1",
+            "name": "Size",
+            "items": [
+              {
+                "id": "parameter_item_1",
+                "name": "Medium",
+                "price": 0
+              },
+              {
+                "id": "parameter_item_2",
+                "name": "Large",
+                "price": 1
+              }
+            ]
+          },
+          {
+            "id": "parameter_2",
+            "name": "Milk",
+            "items": [
+              {
+                "id": "parameter_item_3",
+                "name": "Standard",
+                "price": 0
+              },
+              {
+                "id": "parameter_item_4",
+                "name": "Lactose free",
+                "price": 0.5
+              },
+              {
+                "id": "parameter_item_5",
+                "name": "Coconut",
+                "price": 2.5
+              }
+            ]
+          },
+          {
+            "id": "parameter_3",
+            "name": "Roasting",
+            "items": [
+              {
+                "id": "parameter_item_6",
+                "name": "Standard",
+                "price": 0
+              },
+              {
+                "id": "parameter_item_7",
+                "name": "Strong",
+                "price": 1
+              },
+              {
+                "id": "parameter_item_8",
+                "name": "Light",
+                "price": 1.5
+              }
+            ]
+          }
+        ],
+        "addons": [
+          {
+            "id": "addon_1",
+            "name": "Chocolate chips",
+            "price": 0.5
+          },
+          {
+            "id": "addon_2",
+            "name": "Cinnamon",
+            "price": 0.5
+          }
+        ]
+      },
+      {
+        "id": "product_2",
+        "name": "Espresso",
+        "price": 2.5,
+        "parameters": [
+          {
+            "id": "parameter_4",
+            "name": "Size",
+            "items": [
+              {
+                "id": "parameter_item_9",
+                "name": "Small",
+                "price": 0
+              },
+              {
+                "id": "parameter_item_10",
+                "name": "Medium",
+                "price": 1
+              }
+            ]
+          },
+          {
+            "id": "parameter_5",
+            "name": "Roasting",
+            "items": [
+              {
+                "id": "parameter_item_11",
+                "name": "Standard",
+                "price": 0
+              },
+              {
+                "id": "parameter_item_12",
+                "name": "Strong",
+                "price": 1
+              },
+              {
+                "id": "parameter_item_13",
+                "name": "Light",
+                "price": 1.5
+              }
+            ]
+          }
+        ],
+        "addons": [
+          {
+            "id": "addon_3",
+            "name": "Cinnamon",
+            "price": 0.5
+          }
+        ]
+      },
+      {
+        "id": "product_3",
+        "name": "Americano",
+        "price": 3.0,
+        "parameters": [
+          {
+            "id": "parameter_6",
+            "name": "Size",
+            "items": [
+              {
+                "id": "parameter_item_14",
+                "name": "Small",
+                "price": 0
+              },
+              {
+                "id": "parameter_item_15",
+                "name": "Medium",
+                "price": 1
+              }
+            ]
+          },
+          {
+            "id": "parameter_7",
+            "name": "Roasting",
+            "items": [
+              {
+                "id": "parameter_item_16",
+                "name": "Standard",
+                "price": 0
+              },
+              {
+                "id": "parameter_item_17",
+                "name": "Strong",
+                "price": 1
+              },
+              {
+                "id": "parameter_item_18",
+                "name": "Light",
+                "price": 1.5
+              }
+            ]
+          }
+        ],
+        "addons": [
+          {
+            "id": "addon_4",
+            "name": "Cinnamon",
+            "price": 0.5
+          }
+        ]
+      },
+      {
+        "id": "product_4",
+        "name": "Mocha",
+        "price": 5.0,
+        "parameters": [
+          {
+            "id": "parameter_8",
+            "name": "Size",
+            "items": [
+              {
+                "id": "parameter_item_19",
+                "name": "Small",
+                "price": 0
+              },
+              {
+                "id": "parameter_item_20",
+                "name": "Medium",
+                "price": 1
+              },
+              {
+                "id": "parameter_item_21",
+                "name": "Medium",
+                "price": 2
+              }
+            ]
+          },
+          {
+            "id": "parameter_9",
+            "name": "Milk",
+            "items": [
+              {
+                "id": "parameter_item_22",
+                "name": "Standard",
+                "price": 0
+              },
+              {
+                "id": "parameter_item_23",
+                "name": "Lactose free",
+                "price": 0.5
+              },
+              {
+                "id": "parameter_item_24",
+                "name": "Coconut",
+                "price": 2.5
+              }
+            ]
+          },
+          {
+            "id": "parameter_10",
+            "name": "Roasting",
+            "items": [
+              {
+                "id": "parameter_item_25",
+                "name": "Standard",
+                "price": 0
+              },
+              {
+                "id": "parameter_item_26",
+                "name": "Strong",
+                "price": 1
+              },
+              {
+                "id": "parameter_item_27",
+                "name": "Light",
+                "price": 1.5
+              }
+            ]
+          }
+        ],
+        "addons": [
+          {
+            "id": "addon_5",
+            "name": "Chocolate chips",
+            "price": 0.5
+          },
+          {
+            "id": "addon_6",
+            "name": "Cinnamon",
+            "price": 0.5
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "category_2",
+    "name": "Dessert",
+    "products": [
+      {
+        "id": "product_5",
+        "name": "Ice cream",
+        "price": 3.5,
+        "parameters": [
+          {
+            "id": "parameter_11",
+            "name": "Size",
+            "items": [
+              {
+                "id": "parameter_item_28",
+                "name": "1 ball",
+                "price": 0
+              },
+              {
+                "id": "parameter_item_29",
+                "name": "2 balls",
+                "price": 1
+              },
+              {
+                "id": "parameter_item_30",
+                "name": "3 balls",
+                "price": 1.5
+              }
+            ]
+          }
+        ],
+        "addons": [
+          {
+            "id": "addon_7",
+            "name": "Chocolate chips",
+            "price": 0.5
+          }
+        ]
+      },
+      {
+        "id": "product_6",
+        "name": "Cake",
+        "price": 5.5,
+        "parameters": [
+          {
+            "id": "parameter_12",
+            "name": "Topping",
+            "items": [
+              {
+                "id": "parameter_item_31",
+                "name": "Cherry",
+                "price": 0
+              },
+              {
+                "id": "parameter_item_32",
+                "name": "Chocolate",
+                "price": 0
+              },
+              {
+                "id": "parameter_item_33",
+                "name": "Banana",
+                "price": 0
+              }
+            ]
+          }
+        ],
+        "addons": [
+          {
+            "id": "addon_8",
+            "name": "Chocolate chips",
+            "price": 0.5
+          }
+        ]
+      },
+      {
+        "id": "product_7",
+        "name": "Muffin",
+        "price": 2.0
+      }
+    ]
+  },
+  {
+    "id": "category_3",
+    "name": "Tea",
+    "products": [
+      {
+        "id": "product_8",
+        "name": "Black",
+        "price": 2.0,
+        "parameters": [
+          {
+            "id": "parameter_13",
+            "name": "Size",
+            "items": [
+              {
+                "id": "parameter_item_34",
+                "name": "Small",
+                "price": 0
+              },
+              {
+                "id": "parameter_item_35",
+                "name": "Medium",
+                "price": 1
+              }
+            ]
+          },
+          {
+            "id": "parameter_14",
+            "name": "Temperature",
+            "items": [
+              {
+                "id": "parameter_item_36",
+                "name": "Standard",
+                "price": 0
+              },
+              {
+                "id": "parameter_item_37",
+                "name": "Very hot",
+                "price": 0.5
+              },
+              {
+                "id": "parameter_item_38",
+                "name": "Cool",
+                "price": 2
+              }
+            ]
+          }
+        ],
+        "addons": [
+          {
+            "id": "addon_9",
+            "name": "Sugar",
+            "price": 0.2
+          }
+        ]
+      },
+      {
+        "id": "product_9",
+        "name": "Green",
+        "price": 2.5,
+        "parameters": [
+          {
+            "id": "parameter_15",
+            "name": "Size",
+            "items": [
+              {
+                "id": "parameter_item_39",
+                "name": "Small",
+                "price": 0
+              },
+              {
+                "id": "parameter_item_40",
+                "name": "Medium",
+                "price": 1
+              }
+            ]
+          },
+          {
+            "id": "parameter_16",
+            "name": "Temperature",
+            "items": [
+              {
+                "id": "parameter_item_41",
+                "name": "Standard",
+                "price": 0
+              },
+              {
+                "id": "parameter_item_42",
+                "name": "Very hot",
+                "price": 0.5
+              },
+              {
+                "id": "parameter_item_43",
+                "name": "Cool",
+                "price": 2
+              }
+            ]
+          }
+        ],
+        "addons": [
+          {
+            "id": "addon_10",
+            "name": "Sugar",
+            "price": 0.2
+          }
+        ]
+      },
+      {
+        "id": "product_10",
+        "name": "Fruit",
+        "price": 3.0,
+        "parameters": [
+          {
+            "id": "parameter_17",
+            "name": "Size",
+            "items": [
+              {
+                "id": "parameter_item_44",
+                "name": "Small",
+                "price": 0
+              },
+              {
+                "id": "parameter_item_45",
+                "name": "Medium",
+                "price": 1
+              }
+            ]
+          },
+          {
+            "id": "parameter_18",
+            "name": "Temperature",
+            "items": [
+              {
+                "id": "parameter_item_46",
+                "name": "Standard",
+                "price": 0
+              },
+              {
+                "id": "parameter_item_47",
+                "name": "Very hot",
+                "price": 0.5
+              },
+              {
+                "id": "parameter_item_48",
+                "name": "Cool",
+                "price": 2
+              }
+            ]
+          }
+        ],
+        "addons": [
+          {
+            "id": "addon_11",
+            "name": "Sugar",
+            "price": 0.2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "category_4",
+    "name": "Snacks",
+    "products": [
+      {
+        "id": "product_11",
+        "name": "Sweets",
+        "price": 1.5
+      },
+      {
+        "id": "product_12",
+        "name": "Macaron",
+        "price": 3.5,
+        "parameters": [
+          {
+            "id": "parameter_19",
+            "name": "Topping",
+            "items": [
+              {
+                "id": "parameter_item_49",
+                "name": "Lemon",
+                "price": 0
+              },
+              {
+                "id": "parameter_item_50",
+                "name": "Berry",
+                "price": 0
+              },
+              {
+                "id": "parameter_item_51",
+                "name": "Vanilla",
+                "price": 0
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "product_13",
+        "name": "Oreo",
+        "price": 2.0
+      }
+    ]
+  }
+]

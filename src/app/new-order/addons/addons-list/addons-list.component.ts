@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { AddonItem } from '../addon-item/addon-item.model';
 import { CatalogService } from '../catalog.service';
-import { ProductItem } from '../product-item/product-item.model';
+import { ProductItem } from '../products/product-item/product-item.model';
 import { UrlGeneratorService } from '../url-generator.service';
 
 @Component({
