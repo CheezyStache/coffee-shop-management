@@ -1,19 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-import { CatalogService } from '../catalog.service';
-import { CategoryItem } from '../category-item/category-item.model';
-import { UrlGeneratorService } from '../url-generator.service';
+import { ActivatedRoute, Router } from '@angular/router';
+import { CatalogService } from '../../catalog/catalog.service';
+import { Category } from '../../models/category.model';
 
 @Component({
   selector: 'app-category-list',
   templateUrl: './category-list.component.html',
   styleUrls: ['./category-list.component.css'],
-  providers: [UrlGeneratorService],
 })
 export class CategoryListComponent implements OnInit {
-  categories: CategoryItem[] = [];
+  categories: Category[] = [];
 
   constructor(
-    private urlGenerator: UrlGeneratorService,
+    private router: Router,
+    private route: ActivatedRoute,
     private catalog: CatalogService
   ) {}
 
@@ -23,7 +23,7 @@ export class CategoryListComponent implements OnInit {
       .subscribe((categories) => (this.categories = categories));
   }
 
-  onCategoryClick(name: string): void {
-    this.urlGenerator.navigateToCatalogUrl('products', name);
+  onCategoryClick(id: string): void {
+    this.router.navigate(['./', id], { relativeTo: this.route });
   }
 }

@@ -8,7 +8,7 @@ import { NewOrderModule } from './new-order/new-order.module';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, NewOrderModule, MenuModule],
+  imports: [BrowserModule, AppRoutingModule, MenuModule, NewOrderModule],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -1,34 +1,38 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NewOrderComponent } from './new-order/new-order.component';
-import { CategoryItemComponent } from './categories/category-item/category-item.component';
-import { CategoryListComponent } from './category-list/category-list.component';
-import { ProductsListComponent } from './products-list/products-list.component';
 import { RouterModule, Routes } from '@angular/router';
-import { ProductItemComponent } from './products/product-item/product-item.component';
-import { AddonsListComponent } from './addons-list/addons-list.component';
-import { AddonItemComponent } from './addons/addon-item/addon-item.component';
-import { ParametersItemComponent } from './parameters/parameters-item/parameters-item.component';
-import { ParametersListComponent } from './parameters-list/parameters-list.component';
 import { CatalogService } from './catalog/catalog.service';
-import { CartModule } from './cart/cart.module';
+import { CategoryListComponent } from './categories/category-list/category-list.component';
+import { ProductsListComponent } from './products/products-list/products-list.component';
+import { ParametersListComponent } from './parameters/parameters-list/parameters-list.component';
+import { AddonsListComponent } from './addons/addons-list/addons-list.component';
+import { CategoryItemComponent } from './categories/category-item/category-item.component';
+import { ProductItemComponent } from './products/product-item/product-item.component';
+import { ParametersItemComponent } from './parameters/parameters-item/parameters-item.component';
+import { AddonItemComponent } from './addons/addon-item/addon-item.component';
+import { HttpClientModule } from '@angular/common/http';
+import { NewOrderComponent } from './new-order.component';
 
 const routes: Routes = [
   {
     path: 'new-order',
-    component: CategoryListComponent,
+    component: NewOrderComponent,
     children: [
       {
-        path: ':categoryName',
+        path: '',
+        component: CategoryListComponent,
+      },
+      {
+        path: ':categoryId',
         component: ProductsListComponent,
         children: [
           {
-            path: ':productName/parameters',
+            path: ':productId/parameters',
             component: ParametersListComponent,
           },
           {
-            path: ':productName/addons',
-            component: ParametersListComponent,
+            path: ':productId/addons',
+            component: AddonsListComponent,
           },
         ],
       },
@@ -39,22 +43,23 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     NewOrderComponent,
-    CategoryItemComponent,
     CategoryListComponent,
+    CategoryItemComponent,
     ProductsListComponent,
     ProductItemComponent,
+    ParametersListComponent,
+    ParametersItemComponent,
     AddonsListComponent,
     AddonItemComponent,
-    ParametersItemComponent,
-    ParametersListComponent,
   ],
   imports: [
     CommonModule,
     RouterModule,
-    CartModule,
-    RouterModule.forChild(routes),
+    RouterModule.forRoot(routes),
+    HttpClientModule,
   ],
   providers: [CatalogService],
   exports: [RouterModule],
+  bootstrap: [NewOrderComponent],
 })
 export class NewOrderModule {}

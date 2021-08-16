@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { CategoryItem } from './category-item.model';
+import { Category } from '../../models/category.model';
 
 @Component({
   selector: 'app-category-item',
@@ -7,14 +7,14 @@ import { CategoryItem } from './category-item.model';
   styleUrls: ['./category-item.component.css'],
 })
 export class CategoryItemComponent {
-  @Input() category: CategoryItem;
+  @Input() category: Category;
   @Output() onCategoryClick: EventEmitter<string> = new EventEmitter<string>();
 
   constructor() {
-    this.category = new CategoryItem('Category name');
+    this.category = new Category('id', 'Category name', []);
   }
 
   onClick(): void {
-    this.onCategoryClick.emit(this.category.name);
+    this.onCategoryClick.emit(this.category.id);
   }
 }

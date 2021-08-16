@@ -1,33 +1,31 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { CatalogService } from '../catalog.service';
-import { ProductItem } from '../product-item/product-item.model';
-import { UrlGeneratorService } from '../url-generator.service';
+import { ActivatedRoute, Router } from '@angular/router';
+import { CatalogService } from '../../catalog/catalog.service';
+import { Product } from '../../models/product.model';
 
 @Component({
   selector: 'app-products-list',
   templateUrl: './products-list.component.html',
   styleUrls: ['./products-list.component.css'],
-  providers: [UrlGeneratorService],
 })
 export class ProductsListComponent implements OnInit {
-  products: ProductItem[] = [];
+  products: Product[] = [];
 
   constructor(
-    private urlGenerator: UrlGeneratorService,
+    private router: Router,
     private route: ActivatedRoute,
     private catalog: CatalogService
   ) {}
 
   ngOnInit(): void {
-    this.route.params.subscribe((params) => {
-      this.catalog
-        .getProducts(params['categoryName'])
-        .subscribe((products) => (this.products = products));
-    });
+    const params = this.route.snapshot.params;
+
+    this.catalog
+      .getProducts()
+      .subscribe((products) => (this.products = products));
   }
 
-  onProductClick(name: string): void {
-    this.urlGenerator.navigateToCatalogUrl('parameters', name);
+  onProductClick(id: string): void {
+    this.router.navigate(['./', id, 'parameters'], { relativeTo: this.route });
   }
 }
