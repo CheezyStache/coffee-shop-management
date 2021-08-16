@@ -3,9 +3,9 @@
   <div class="row m-0">
     <div
       class="card col-3 me-5"
-      *ngFor="let param of parametersSection.parameters"
-      [style.background-color]="chosenItem === param.name ? '#20c997' : ''"
-      (click)="onClick(param.name)"
+      *ngFor="let param of parametersSection.items"
+      [style.background-color]="chosenItemId === param.id ? '#20c997' : ''"
+      (click)="onClick(param.id)"
     >
       <h4>{{ param.name }}</h4>
       <h4 style="color: #dc3545">

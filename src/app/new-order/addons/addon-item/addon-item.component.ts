@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { AddonItem } from './addon-item.model';
+import { Addon } from '../../models/addon.model';
 
 @Component({
   selector: 'app-addon-item',
@@ -7,16 +7,16 @@ import { AddonItem } from './addon-item.model';
   styleUrls: ['./addon-item.component.css'],
 })
 export class AddonItemComponent {
-  @Input() addon: AddonItem;
+  @Input() addon: Addon;
   @Input() isPicked: boolean;
   @Output() onAddonClick: EventEmitter<string> = new EventEmitter<string>();
 
   constructor() {
-    this.addon = new AddonItem('Addon', 0, 'Product');
+    this.addon = new Addon('id', 'Addon', 0);
     this.isPicked = false;
   }
 
-  onClick(name: string): void {
-    this.onAddonClick.emit(name);
+  onClick(id: string): void {
+    this.onAddonClick.emit(id);
   }
 }

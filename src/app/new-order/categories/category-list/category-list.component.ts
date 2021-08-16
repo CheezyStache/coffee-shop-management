@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Observable } from 'rxjs';
 import { CatalogService } from '../../catalog/catalog.service';
 import { Category } from '../../models/category.model';
 
@@ -9,7 +10,7 @@ import { Category } from '../../models/category.model';
   styleUrls: ['./category-list.component.css'],
 })
 export class CategoryListComponent implements OnInit {
-  categories: Category[] = [];
+  categories: Observable<Category[]> = new Observable();
 
   constructor(
     private router: Router,
@@ -18,12 +19,10 @@ export class CategoryListComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.catalog
-      .getCategories()
-      .subscribe((categories) => (this.categories = categories));
+    this.categories = this.catalog.getCategories();
   }
 
   onCategoryClick(id: string): void {
-    this.router.navigate(['./', id], { relativeTo: this.route });
+    this.router.navigate([id], { relativeTo: this.route });
   }
 }

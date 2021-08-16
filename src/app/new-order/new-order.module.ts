@@ -25,16 +25,14 @@ const routes: Routes = [
       {
         path: ':categoryId',
         component: ProductsListComponent,
-        children: [
-          {
-            path: ':productId/parameters',
-            component: ParametersListComponent,
-          },
-          {
-            path: ':productId/addons',
-            component: AddonsListComponent,
-          },
-        ],
+      },
+      {
+        path: 'parameters/:productId',
+        component: ParametersListComponent,
+      },
+      {
+        path: 'addons/:productId',
+        component: AddonsListComponent,
       },
     ],
   },

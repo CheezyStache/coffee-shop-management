@@ -15,7 +15,8 @@
               {
                 "id": "parameter_item_1",
                 "name": "Medium",
-                "price": 0
+                "price": 0,
+                "isDefault": true
               },
               {
                 "id": "parameter_item_2",
@@ -31,7 +32,8 @@
               {
                 "id": "parameter_item_3",
                 "name": "Standard",
-                "price": 0
+                "price": 0,
+                "isDefault": true
               },
               {
                 "id": "parameter_item_4",
@@ -52,7 +54,8 @@
               {
                 "id": "parameter_item_6",
                 "name": "Standard",
-                "price": 0
+                "price": 0,
+                "isDefault": true
               },
               {
                 "id": "parameter_item_7",
@@ -92,7 +95,8 @@
               {
                 "id": "parameter_item_9",
                 "name": "Small",
-                "price": 0
+                "price": 0,
+                "isDefault": true
               },
               {
                 "id": "parameter_item_10",
@@ -108,7 +112,8 @@
               {
                 "id": "parameter_item_11",
                 "name": "Standard",
-                "price": 0
+                "price": 0,
+                "isDefault": true
               },
               {
                 "id": "parameter_item_12",
@@ -143,7 +148,8 @@
               {
                 "id": "parameter_item_14",
                 "name": "Small",
-                "price": 0
+                "price": 0,
+                "isDefault": true
               },
               {
                 "id": "parameter_item_15",
@@ -159,7 +165,8 @@
               {
                 "id": "parameter_item_16",
                 "name": "Standard",
-                "price": 0
+                "price": 0,
+                "isDefault": true
               },
               {
                 "id": "parameter_item_17",
@@ -194,7 +201,8 @@
               {
                 "id": "parameter_item_19",
                 "name": "Small",
-                "price": 0
+                "price": 0,
+                "isDefault": true
               },
               {
                 "id": "parameter_item_20",
@@ -215,7 +223,8 @@
               {
                 "id": "parameter_item_22",
                 "name": "Standard",
-                "price": 0
+                "price": 0,
+                "isDefault": true
               },
               {
                 "id": "parameter_item_23",
@@ -236,7 +245,8 @@
               {
                 "id": "parameter_item_25",
                 "name": "Standard",
-                "price": 0
+                "price": 0,
+                "isDefault": true
               },
               {
                 "id": "parameter_item_26",
@@ -282,7 +292,8 @@
               {
                 "id": "parameter_item_28",
                 "name": "1 ball",
-                "price": 0
+                "price": 0,
+                "isDefault": true
               },
               {
                 "id": "parameter_item_29",
@@ -317,7 +328,8 @@
               {
                 "id": "parameter_item_31",
                 "name": "Cherry",
-                "price": 0
+                "price": 0,
+                "isDefault": true
               },
               {
                 "id": "parameter_item_32",
@@ -363,7 +375,8 @@
               {
                 "id": "parameter_item_34",
                 "name": "Small",
-                "price": 0
+                "price": 0,
+                "isDefault": true
               },
               {
                 "id": "parameter_item_35",
@@ -379,7 +392,8 @@
               {
                 "id": "parameter_item_36",
                 "name": "Standard",
-                "price": 0
+                "price": 0,
+                "isDefault": true
               },
               {
                 "id": "parameter_item_37",
@@ -414,7 +428,8 @@
               {
                 "id": "parameter_item_39",
                 "name": "Small",
-                "price": 0
+                "price": 0,
+                "isDefault": true
               },
               {
                 "id": "parameter_item_40",
@@ -430,7 +445,8 @@
               {
                 "id": "parameter_item_41",
                 "name": "Standard",
-                "price": 0
+                "price": 0,
+                "isDefault": true
               },
               {
                 "id": "parameter_item_42",
@@ -465,7 +481,8 @@
               {
                 "id": "parameter_item_44",
                 "name": "Small",
-                "price": 0
+                "price": 0,
+                "isDefault": true
               },
               {
                 "id": "parameter_item_45",
@@ -481,7 +498,8 @@
               {
                 "id": "parameter_item_46",
                 "name": "Standard",
-                "price": 0
+                "price": 0,
+                "isDefault": true
               },
               {
                 "id": "parameter_item_47",
@@ -527,7 +545,8 @@
               {
                 "id": "parameter_item_49",
                 "name": "Lemon",
-                "price": 0
+                "price": 0,
+                "isDefault": true
               },
               {
                 "id": "parameter_item_50",

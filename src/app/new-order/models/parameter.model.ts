@@ -7,5 +7,12 @@ export class Parameter {
 }
 
 export class ParamterItem {
-  constructor(public id: string, public name: string, public price: number) {}
+  public isChosen?: boolean;
+
+  constructor(
+    public id: string,
+    public name: string,
+    public price: number,
+    public isDefault?: boolean
+  ) {}
 }

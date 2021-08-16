@@ -1,4 +1,4 @@
-<!-- <button
+<button
   type="button"
   class="btn btn-primary btn-lg"
   style="width: 100%"
@@ -15,10 +15,10 @@
     </div>
   </div>
 </div>
-<div class="my-2" *ngFor="let addon of addons">
+<div class="my-2" *ngFor="let addon of addons | async">
   <app-addon-item
     [addon]="addon"
-    [isPicked]="pickedAddons.includes(addon)"
+    [isPicked]="pickedAddonsIds.includes(addon.id)"
     (onAddonClick)="pickAddon($event)"
   ></app-addon-item>
-</div> -->
+</div>

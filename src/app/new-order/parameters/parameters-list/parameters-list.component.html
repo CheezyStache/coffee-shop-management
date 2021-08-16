@@ -1,4 +1,4 @@
-<!-- <button
+<button
   type="button"
   class="btn btn-primary btn-lg"
   style="width: 100%"
@@ -15,10 +15,10 @@
     </div>
   </div>
 </div>
-<div class="my-2" *ngFor="let parameter of parameters">
+<div class="my-2" *ngFor="let parameter of parameters | async">
   <app-parameters-item
     [parametersSection]="parameter"
-    [chosenItem]="chosenItems[parameter.name]"
-    (onParameterClick)="pickParameterItem(parameter.name, $event)"
+    [chosenItemId]="chosenItemsIds[parameter.id]"
+    (onParameterClick)="pickParameterItem(parameter.id, $event)"
   ></app-parameters-item>
-</div> -->
+</div>
