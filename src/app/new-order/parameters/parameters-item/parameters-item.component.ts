@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Parameter } from '../../models/parameter.model';
+import { ParametersSection } from './parameters-item.model';
 
 @Component({
   selector: 'app-parameters-item',
@@ -7,13 +7,11 @@ import { Parameter } from '../../models/parameter.model';
   styleUrls: ['./parameters-item.component.css'],
 })
 export class ParametersItemComponent {
-  @Input() parametersSection: Parameter;
-  @Input() chosenItemId: string;
+  @Input() parametersSection: ParametersSection;
   @Output() onParameterClick: EventEmitter<string> = new EventEmitter<string>();
 
   constructor() {
-    this.parametersSection = new Parameter('id', 'Name', []);
-    this.chosenItemId = 'id';
+    this.parametersSection = new ParametersSection('id', 'Name', []);
   }
 
   onClick(id: string): void {

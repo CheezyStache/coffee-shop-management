@@ -1,9 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
+import { map, subscribeOn } from 'rxjs/operators';
 import { CatalogService } from '../../catalog/catalog.service';
 import { Parameter } from '../../models/parameter.model';
 import { Product } from '../../models/product.model';
+import {
+  ParameterItem,
+  ParametersSection,
+} from '../parameters-item/parameters-item.model';
 
 @Component({
   selector: 'app-parameters-list',
@@ -11,9 +16,8 @@ import { Product } from '../../models/product.model';
   styleUrls: ['./parameters-list.component.css'],
 })
 export class ParametersListComponent implements OnInit {
-  parameters: Observable<Parameter[]> = new Observable();
+  parameters: ParametersSection[] = [];
   product: Product;
-  chosenItemsIds: { [key: string]: string } = {};
 
   constructor(
     private router: Router,
@@ -26,8 +30,10 @@ export class ParametersListComponent implements OnInit {
   ngOnInit(): void {
     const params = this.route.snapshot.params;
 
-    this.parameters = this.catalogService.getParameters(params['productId']);
-    this.parameters.subscribe(this.initChosenItems);
+    this.catalogService
+      .getParameters(params['productId'])
+      .pipe(map(initChosenItems))
+      .subscribe((p) => (this.parameters = p));
 
     this.catalogService
       .getProductById(params['productId'])
@@ -35,7 +41,14 @@ export class ParametersListComponent implements OnInit {
   }
 
   pickParameterItem(sectionId: string, itemId: string): void {
-    this.chosenItemsIds[sectionId] = itemId;
+    const section = this.parameters.find((p) => p.id === sectionId);
+    if (section == undefined) throw new Error('Parameter section is unknown');
+
+    section.items.forEach((i) => (i.isChosen = false));
+    const item = section.items.find((i) => i.id === itemId);
+    if (item == undefined) throw new Error('Parameter item is unknown');
+
+    item.isChosen = true;
   }
 
   onContinue(): void {
@@ -43,12 +56,13 @@ export class ParametersListComponent implements OnInit {
       relativeTo: this.route,
     });
   }
+}
 
-  private initChosenItems(parameters: Parameter[]): void {
-    this.chosenItemsIds = {};
-
-    for (const p of parameters) {
-      this.chosenItemsIds[p.id] = p.items.find((i) => i.isDefault)?.id ?? '';
-    }
-  }
+function initChosenItems(parameters: Parameter[]): ParametersSection[] {
+  return parameters.map((parameter) => ({
+    ...parameter,
+    items: parameter.items.map(
+      (i) => ({ ...i, isChosen: i.isDefault } as ParameterItem)
+    ),
+  }));
 }

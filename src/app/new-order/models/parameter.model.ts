@@ -2,13 +2,11 @@ export class Parameter {
   constructor(
     public id: string,
     public name: string,
-    public items: ParamterItem[]
+    public items: ParameterItem[]
   ) {}
 }
 
-export class ParamterItem {
-  public isChosen?: boolean;
-
+export class ParameterItem {
   constructor(
     public id: string,
     public name: string,

@@ -1,11 +1,18 @@
-export class ParametersItem {
-  constructor(public name: string, public price: number) {}
+import {
+  Parameter,
+  ParameterItem as ParameterItemData,
+} from '../../models/parameter.model';
+
+export class ParameterItem extends ParameterItemData {
+  public isChosen?: boolean;
 }
 
-export class ParametersSection {
+export class ParametersSection extends Parameter {
   constructor(
+    public id: string,
     public name: string,
-    public product: string,
-    public parameters: ParametersItem[]
-  ) {}
+    public items: ParameterItem[]
+  ) {
+    super(id, name, items);
+  }
 }

@@ -15,10 +15,9 @@
     </div>
   </div>
 </div>
-<div class="my-2" *ngFor="let parameter of parameters | async">
+<div class="my-2" *ngFor="let parameter of parameters">
   <app-parameters-item
     [parametersSection]="parameter"
-    [chosenItemId]="chosenItemsIds[parameter.id]"
     (onParameterClick)="pickParameterItem(parameter.id, $event)"
   ></app-parameters-item>
 </div>
