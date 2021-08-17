@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule, Routes } from '@angular/router';
 import { CatalogService } from './catalog/catalog.service';
 import { CategoryListComponent } from './categories/category-list/category-list.component';
 import { ProductsListComponent } from './products/products-list/products-list.component';
@@ -12,31 +11,7 @@ import { ParametersItemComponent } from './parameters/parameters-item/parameters
 import { AddonItemComponent } from './addons/addon-item/addon-item.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NewOrderComponent } from './new-order.component';
-
-const routes: Routes = [
-  {
-    path: 'new-order',
-    component: NewOrderComponent,
-    children: [
-      {
-        path: '',
-        component: CategoryListComponent,
-      },
-      {
-        path: ':categoryId',
-        component: ProductsListComponent,
-      },
-      {
-        path: 'parameters/:productId',
-        component: ParametersListComponent,
-      },
-      {
-        path: 'addons/:productId',
-        component: AddonsListComponent,
-      },
-    ],
-  },
-];
+import { NewOrderRoutingModule } from './new-order-routing-module';
 
 @NgModule({
   declarations: [
@@ -50,14 +25,9 @@ const routes: Routes = [
     AddonsListComponent,
     AddonItemComponent,
   ],
-  imports: [
-    CommonModule,
-    RouterModule,
-    RouterModule.forRoot(routes),
-    HttpClientModule,
-  ],
+  imports: [CommonModule, NewOrderRoutingModule, HttpClientModule],
   providers: [CatalogService],
-  exports: [RouterModule],
-  bootstrap: [NewOrderComponent],
+  exports: [NewOrderComponent],
+  bootstrap: [],
 })
 export class NewOrderModule {}
